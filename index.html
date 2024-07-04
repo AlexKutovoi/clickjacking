@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Clickjack test page</title>
+    </head>   
+       <style>
+      iframe {
+          width:1000px;
+          height:500px;
+          position:absolute;
+          top:0; left:0;
+          filter:alpha(opacity=10); /* in a real attack this would be opacity=0 */
+          opacity:0.1;
+      }
+    </style>
+    <body>
+      <button style="z-index:-1;margin-top:215px;margin-left:270px;width:50px;">Fun!</button>
+      <iframe src="http://localhost:3001" width="800" height="400"></iframe>
+    </body>       
+</html>
